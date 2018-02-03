@@ -26,12 +26,12 @@ server.listen(8080, function () {
 
 // rotas REST
 
-server.get('', restify.plugins.serverStatic({
+server.get('/', restify.plugins.serveStatic({
 
         directory: './dist',
         file: 'index.html'
 
-}))
+}));
 
 
 server.get('/read', (req, res, next) => {
